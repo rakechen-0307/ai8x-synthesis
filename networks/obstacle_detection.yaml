@@ -2,8 +2,8 @@
 # HWC (little data) configuration for SVHN
 # Parallel Model
 
-arch: ai85tinierssd
-dataset: svhn_74
+arch: obstacle_detection
+dataset: coco
 
 layers:
   # Layer 0: backbone_conv1
