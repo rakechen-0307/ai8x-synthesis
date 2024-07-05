@@ -8,7 +8,6 @@ dataset: traffic_light_number
 layers:
   # Layer 0: backbone_conv1
   - out_offset: 0x0000
-    in_offset: 0x0000
     processors: 0x0000000000000007
     output_processors: 0xffffffff00000000
     operation: conv2d
@@ -18,7 +17,6 @@ layers:
 
   # Layer 1: backbone_conv2
   - out_offset: 0x2000
-    in_offset: 0x0000
     processors: 0xffffffff00000000
     output_processors: 0x00000000ffffffff
     operation: conv2d
@@ -28,7 +26,6 @@ layers:
 
   # Layer 2: backbone_conv3
   - out_offset: 0x0000
-    in_offset: 0x0000
     processors: 0x00000000ffffffff
     output_processors: 0xffffffffffffffff
     operation: conv2d
@@ -40,7 +37,6 @@ layers:
 
   # Layer 3: backbone_conv4
   - out_offset: 0x2000 # 1600
-    in_offset: 0x0000
     processors: 0xffffffffffffffff
     output_processors: 0xffffffffffffffff
     operation: conv2d
@@ -50,7 +46,6 @@ layers:
 
   # Layer 4: backbone_conv5
   - out_offset: 0x0000 # 1600+600 = 1C00
-    in_offset: 0x0000
     processors: 0xffffffffffffffff
     output_processors: 0xffffffffffffffff
     operation: conv2d
@@ -62,7 +57,6 @@ layers:
 
   # Layer 5: backbone_conv6
   - out_offset: 0x2000 # 1600
-    in_offset: 0x0000
     processors: 0xffffffffffffffff
     output_processors: 0xffffffffffffffff
     operation: conv2d
@@ -72,7 +66,6 @@ layers:
 
   # Layer 6: backbone_conv7
   - out_offset: 0x0000 # 1600
-    in_offset: 0x0000
     processors: 0xffffffffffffffff
     output_processors: 0xffffffffffffffff
     operation: conv2d
@@ -83,7 +76,6 @@ layers:
   # Layer 7: backbone_conv8
   - name: backbone_conv8
     out_offset: 0x2000 # 1C00
-    in_offset: 0x0000
     processors: 0xffffffffffffffff
     output_processors: 0x00000000ffffffff
     operation: conv2d
@@ -94,7 +86,6 @@ layers:
   # Layer 8: backbone_conv9
   - name: backbone_conv9
     out_offset: 0x0000 # 1E00
-    in_offset: 0x0000
     processors: 0x00000000ffffffff
     output_processors: 0xffffffff00000000
     operation: conv2d
@@ -107,7 +98,6 @@ layers:
   # Layer 9: backbone_conv10
   - name: backbone_conv10
     out_offset: 0x2000 # 1F00
-    in_offset: 0x0000
     processors: 0xffffffff00000000
     output_processors: 0x00000000ffffffff
     operation: conv2d
@@ -120,7 +110,6 @@ layers:
   # Layer 10: conv12_1
   - name: conv12_1
     out_offset: 0x0000
-    in_offset: 0x0000
     processors: 0x00000000ffffffff
     output_processors: 0x000000000000ffff
     operation: conv2d
@@ -131,7 +120,6 @@ layers:
   # Layer 11: conv12_2
   - name: conv12_2
     out_offset: 0x2000
-    in_offset: 0x0000
     processors: 0x000000000000ffff
     output_processors: 0x00000000ffff0000
     operation: conv2d
@@ -145,7 +133,7 @@ layers:
   - out_offset: 0x0000 # 510
     in_offset: 0x2000
     processors: 0x00000000ffffffff
-    output_processors: 0x000000000000ffff
+    output_processors: 0x00000000000000ff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -154,10 +142,10 @@ layers:
     activate: None
 
   # Layer 13: loc_conv9
-  - out_offset: 0x2000 # 144 = 2654
+  - out_offset: 0x1000 # 144 = 2654
     in_offset: 0x0000
     processors: 0xffffffff00000000
-    output_processors: 0x000000000000ffff
+    output_processors: 0x00000000000000ff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -166,10 +154,10 @@ layers:
     activate: None
 
   # Layer 14: loc_conv10
-  - out_offset: 0x4000
+  - out_offset: 0x2000
     in_offset: 0x2000
     processors: 0x00000000ffffffff
-    output_processors: 0x000000000000ffff
+    output_processors: 0x00000000000000ff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -178,10 +166,10 @@ layers:
     activate: None
 
   # Layer 15: loc_conv12_2
-  - out_offset: 0x8000
+  - out_offset: 0x4000
     in_offset: 0x2000
     processors: 0x00000000ffff0000
-    output_processors: 0x000000000000ffff
+    output_processors: 0x00000000000000ff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -190,10 +178,10 @@ layers:
     activate: None
 
   # Layer 16: cl_conv8
-  - out_offset: 0x2000 # 510
+  - out_offset: 0x1000 # 510
     in_offset: 0x2000
     processors: 0x00000000ffffffff
-    output_processors: 0xffff000000000000
+    output_processors: 0xfffffc0000000000
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -202,10 +190,10 @@ layers:
     activate: None
 
   # Layer 17: cl_conv9
-  - out_offset: 0x4000 # 144 = 2654
+  - out_offset: 0x2000 # 144 = 2654
     in_offset: 0x0000
     processors: 0xffffffff00000000
-    output_processors: 0x000000000000ffff
+    output_processors: 0x0000000000cfffff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -214,10 +202,10 @@ layers:
     activate: None
 
   # Layer 18: cl_conv10
-  - out_offset: 0x6000
+  - out_offset: 0x3000
     in_offset: 0x2000
     processors: 0x00000000ffffffff
-    output_processors: 0xffff000000000000
+    output_processors: 0xfffffc0000000000
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -226,10 +214,10 @@ layers:
     activate: None
 
   # Layer 19: cl_conv12_2
-  - out_offset: 0xA000
+  - out_offset: 0x5000
     in_offset: 0x2000
     processors: 0x00000000ffff0000
-    output_processors: 0x000000000000ffff
+    output_processors: 0x0000000000cfffff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
