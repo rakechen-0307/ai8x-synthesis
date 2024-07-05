@@ -154,7 +154,7 @@ layers:
     activate: None
 
   # Layer 14: loc_conv10
-  - out_offset: 0x4000
+  - out_offset: 0x2000
     in_offset: 0x2000
     processors: 0x00000000ffffffff
     output_processors: 0x000000000000ffff
@@ -166,7 +166,7 @@ layers:
     activate: None
 
   # Layer 15: loc_conv12_2
-  - out_offset: 0x8000
+  - out_offset: 0x4000
     in_offset: 0x2000
     processors: 0x00000000ffff0000
     output_processors: 0x000000000000ffff
