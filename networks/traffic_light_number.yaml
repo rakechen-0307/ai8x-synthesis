@@ -2,8 +2,8 @@
 # HWC (little data) configuration for SVHN
 # Parallel Model
 
-arch: obstacle_detection
-dataset: obstacle_detection
+arch: traffic_light_number
+dataset: traffic_light_number
 
 layers:
   # Layer 0: backbone_conv1
