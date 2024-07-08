@@ -145,7 +145,7 @@ layers:
   - out_offset: 0x3000 # 510
     in_offset: 0x1600
     processors: 0x00000000ffffffff
-    output_processors: 0x000000000000ffff
+    output_processors: 0x00000000000000ff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -157,7 +157,7 @@ layers:
   - out_offset: 0x3510 # 144 = 2654
     in_offset: 0x1C00
     processors: 0xffffffff00000000
-    output_processors: 0x000000000000ffff
+    output_processors: 0x00000000000000ff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -169,7 +169,7 @@ layers:
   - out_offset: 0x3654
     in_offset: 0x1E00
     processors: 0x00000000ffffffff
-    output_processors: 0x000000000000ffff
+    output_processors: 0x00000000000000ff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -181,7 +181,7 @@ layers:
   - out_offset: 0x3694
     in_offset: 0x2000
     processors: 0x00000000ffff0000
-    output_processors: 0x000000000000ffff
+    output_processors: 0x00000000000000ff
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -193,7 +193,7 @@ layers:
   - out_offset: 0x3000 # 510
     in_offset: 0x1600
     processors: 0x00000000ffffffff
-    output_processors: 0xfffffffffff00000
+    output_processors: 0xfffffc0000000000
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -205,7 +205,7 @@ layers:
   - out_offset: 0x3510 # 144 = 2654
     in_offset: 0x1C00
     processors: 0xffffffff00000000
-    output_processors: 0xfffffffffff00000
+    output_processors: 0xfffffc0000000000
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -217,7 +217,7 @@ layers:
   - out_offset: 0x3654
     in_offset: 0x1E00
     processors: 0x00000000ffffffff
-    output_processors: 0xfffffffffff00000
+    output_processors: 0xfffffc0000000000
     operation: conv2d
     kernel_size: 3x3
     pad: 1
@@ -229,7 +229,7 @@ layers:
   - out_offset: 0x3694
     in_offset: 0x2000
     processors: 0x00000000ffff0000
-    output_processors: 0xfffffffffff00000
+    output_processors: 0xfffffc0000000000
     operation: conv2d
     kernel_size: 3x3
     pad: 1
