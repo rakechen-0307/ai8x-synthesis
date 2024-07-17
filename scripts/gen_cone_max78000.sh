@@ -1,0 +1,1 @@
+python ai8xize.py --test-dir sdk/Examples/MAX78000/CNN --prefix cone --checkpoint-file trained/cone-qat8-q.pth.tar --config-file networks/cone.yaml --overlap-data --device MAX78000 --timer 0 --display-checkpoint --verbose
